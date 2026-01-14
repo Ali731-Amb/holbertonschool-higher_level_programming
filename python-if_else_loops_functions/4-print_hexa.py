@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for number in range(0, 99):
-    print(f"{number} = {number:x}")
+for code in range(97, 123):
+    if code != 101 and code != 113:  # 101 est 'e', 113 est 'q'
+        print("{:c}".format(code), end="")
