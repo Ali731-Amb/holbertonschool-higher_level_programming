@@ -5,6 +5,8 @@
 class Rectangle:
     """
     Represent a rectangle
+    Attributes are controlled through properties:
+    width (int) and height (int), both must be >= 0.
     """
     def __init__(self, width=0, height=0):
         """initialize the rectangle"""
