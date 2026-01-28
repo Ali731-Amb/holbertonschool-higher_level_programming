@@ -3,4 +3,7 @@
 
 
 class Square:
+    """
+    Class for Square
+    """
     pass
