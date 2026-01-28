@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Empty class for rectangle
+    Represent a rectangle
     """
     def __init__(self, width=0, height=0):
         self.widht = width
@@ -12,10 +12,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """Retrieve the width"""
         return self.width
 
     @width.setter
     def width(self, value):
+        """Set the width with validation"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -24,10 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Retreive the height"""
         return self.height
 
     @height.setter
     def height(self, value):
+        """Set the height with validation"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
