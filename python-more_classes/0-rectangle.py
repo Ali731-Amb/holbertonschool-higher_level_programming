@@ -2,7 +2,7 @@
 """Class that define a rectangle"""
 
 
-class rectangle:
+class Rectangle:
     """
     Empty class for rectangle
     """
