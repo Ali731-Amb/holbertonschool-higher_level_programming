@@ -3,13 +3,8 @@
 
 
 class Rectangle:
-    """
-    Represent a rectangle
-    Attributes are controlled through properties:
-    width (int) and height (int), both must be >= 0.
-    """
+    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
-        """initialize the rectangle"""
         self.width = width
         self.height = height
 
@@ -44,3 +39,11 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return (self.width * 2) + (self.height * 2)
+
+    def __str__(self):
+        if self.width == 0 or self.height == 0:
+            return ""
+        return "\n".join(["#" * self.width for _ in range(self.height)])
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.width, self.height)
