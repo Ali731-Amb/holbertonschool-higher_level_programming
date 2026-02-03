@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """
 Module task_00_abc
-This module defines an abstract class hierarchy for animals with an abstract sound method.
+This module defines an abstract class
+hierarchy for animals with an abstract sound method.
 """
 from abc import ABC, abstractmethod
+
 
 class Animal(ABC):
     """
@@ -17,12 +19,14 @@ class Animal(ABC):
         """
         pass
 
+
 class Dog(Animal):
     """
     Class representing a dog.
     """
     def sound(self):
         return "Bark"
+
 
 class Cat(Animal):
     """
