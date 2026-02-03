@@ -1,36 +1,58 @@
 #!/usr/bin/python3
-
 """
-BaseGeometry and Rectangle classes
+This module defines a BaseGeometry class and a subclass Rectangle.
 """
 
 
 class BaseGeometry:
-    """Base class for geometry shapes."""
+    """
+    A class representing base geometry.
+    """
 
     def area(self):
-        """Public instance method that is not yet implemented."""
+        """
+        Public instance method that raises an Exception.
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validate that value is a positive integer."""
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
+        """
+        Validates if a value is a positive integer.
+
+        Args:
+            name (str): The name of the value.
+            value: The value to validate.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is less than or equal to 0.
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class that inherits from BaseGeometry."""
+    """
+    A class representing a rectangle, inheriting from BaseGeometry.
+    """
 
     def __init__(self, width, height):
-        """Initialize width and height after validation."""
+        """
+        Initializes the Rectangle with width and height.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+        """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-
         self.__width = width
         self.__height = height
 
     def area(self):
-        """Calculate the area of the rectangle."""
+        """
+        Calculates and returns the area of the rectangle.
+        """
         return self.__width * self.__height
