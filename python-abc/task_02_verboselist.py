@@ -14,9 +14,10 @@ class VerboseList(list):
 
     def extend(self, iterable):
         """
-        Extend the list by appending elements from the iterable and print a message.
+        Extend the list by appending elements
+        from the iterable and print a message.
         Args:
-            iterable: An iterable with items to add.
+        iterable: An iterable with items to add.
         """
         lenght = len(iterable)
         super().extend(iterable)
@@ -32,17 +33,17 @@ class VerboseList(list):
             print(f"Removed [{item}] from the list.")
             super().remove(item)
 
-
     def pop(self, index=-1):
         """
         Remove and return item at index (default last).
         Prints a message about the operation.
         Args:
-            index (int, optional): The index of the item to remove. Defaults to -1.
+        index (int, optional): The index of the
+        item to remove. Defaults to -1.
         Returns:
-            The item removed from the list.
+        The item removed from the list.
         Raises:
-            IndexError: If index is out of range.
+        IndexError: If index is out of range.
         """
         if index < len(self) and index >= -len(self):
             i = self[index]

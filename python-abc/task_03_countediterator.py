@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 
-
 class CountedIterator():
     """
     An iterator that counts the number of items iterated over.
