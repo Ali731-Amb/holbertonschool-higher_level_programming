@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Module for converting Python objects
 to JSON strings.
@@ -6,6 +7,8 @@ This module provides a function to
 return the JSON representation of an object (as a string).
 """
 
+
+import json
 
 def to_json_string(my_obj):
     """
