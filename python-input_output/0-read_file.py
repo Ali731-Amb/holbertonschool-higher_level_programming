@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 """
-Module for reading and printing the contents of a text file.
-This module provides a function to read a text file (UTF-8) and print its content
+Module for reading and printing the contents of
+a text file.
+This module provides a function to read a text
+file (UTF-8) and print its content
 to the standard output (stdout).
 """
 
@@ -23,7 +25,8 @@ def read_file(filename=""):
         None
     Raises:
         FileNotFoundError: If the file does not exist.
-        PermissionError: If the file cannot be accessed due to permissions.
+        PermissionError: If the file cannot be accessed
+        due to permissions.
         OSError: For other issues related to file access.
 
     Example:
