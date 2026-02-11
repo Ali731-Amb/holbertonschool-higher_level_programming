@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module for loading Python objects from a
 JSON file.
@@ -5,11 +6,9 @@ JSON file.
 This module provides a function to create
 a Python object from a JSON file.
 """
-#!/usr/bin/python3
 
 
 import json
-
 
 
 def load_from_json_file(filename):
