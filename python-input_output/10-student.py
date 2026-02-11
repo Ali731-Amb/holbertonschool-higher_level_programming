@@ -33,9 +33,9 @@ class Student:
         """
         data = self.__dict__
         if type(attrs) is list:
-                return {
-                        key: value for key,
-                        value in data.items() if key in attrs
-                        }
+            return {
+                    key: value for key,
+                    value in data.items() if key in attrs
+                    }
         else:
             return data
