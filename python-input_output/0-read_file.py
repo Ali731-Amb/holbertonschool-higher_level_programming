@@ -3,10 +3,10 @@
 
 def read_file(filename=""):
     """
-    Lit un fichier texte (UTF-8) et affiche son contenu sur la sortie standard.
+    Reads a text file (UTF-8) and prints its content to stdout.
 
     Args:
-        filename (str): Le chemin du fichier à lire. Par défaut, une chaîne vide.
+        filename (str): The path to the file to read. Defaults to an empty string.
     """
     with open(filename, 'r', encoding="utf-8") as f:
         for ligne in f:
