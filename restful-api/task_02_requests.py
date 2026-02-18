@@ -18,8 +18,8 @@ def fetch_and_print_posts():
 
     if r.status_code == 200:
         obj = r.json()
-        for item in r:
-            print(item["Title"])
+        for item in obj:
+            print(item["title"])
 
 
 def fetch_and_save_posts():
@@ -32,13 +32,13 @@ def fetch_and_save_posts():
     if r.status_code == 200:
         obj = r.json()
         p = []
-        for item in r:
-            p = {
+        for item in obj:
+            post_dict = {
                 "id": item["id"],
                 "title": item["title"],
                 "body": item["body"]
                 }
-            p.append(p)
+            p.append(post_dict)
 
             fieldnames = ["id", "title", "body"]
         with open("posts.csv", "w", newline="", encoding="utf-8") as f:
