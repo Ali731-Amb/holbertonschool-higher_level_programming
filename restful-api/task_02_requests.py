@@ -27,7 +27,7 @@ def fetch_and_save_posts():
     Fetch posts and save them to a CSV file.
     """
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
-    print(f"Status code : {r.status_code}")
+    print(f"Status code: {r.status_code}")
 
     if r.status_code == 200:
         obj = r.json()
