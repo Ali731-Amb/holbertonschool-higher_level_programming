@@ -40,7 +40,7 @@ def fetch_and_save_posts():
                 }
             p.append(post_dict)
 
-            fieldnames = ["id", "title", "body"]
+        fieldnames = ["id", "title", "body"]
         with open("posts.csv", "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
