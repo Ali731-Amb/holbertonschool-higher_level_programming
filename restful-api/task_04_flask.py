@@ -18,7 +18,7 @@ def get_data():
     return jsonify(list(users.keys()))
 
 
-@app.status("/status")
+@app.route("/status")
 def status():
     """Confirm the API is running."""
     return "OK"
