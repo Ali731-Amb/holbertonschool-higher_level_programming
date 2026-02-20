@@ -32,5 +32,6 @@ class MyHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
+
 server = HTTPServer(("", 8000), MyHandler)
 server.serve_forever()
