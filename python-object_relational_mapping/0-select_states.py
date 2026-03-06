@@ -1,10 +1,23 @@
+
 #!/usr/bin/python3
-"""Lists all states from the database hbtn_0e_0_usa"""
+"""
+0-select_states.py
+
+Lists all states from the database hbtn_0e_0_usa.
+Usage: ./0-select_states.py <mysql username> <mysql password> <database name>
+Connects to a MySQL server running on localhost at port 3306.
+Prints all states in the 'states' table, sorted by id in ascending order.
+"""
+
 import MySQLdb
 import sys
 
 
-if __name__ == "__main__":
+def main():
+    """
+    Connects to the MySQL database and lists all states in the 'states' table.
+    Prints each row as a tuple.
+    """
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -19,3 +32,7 @@ if __name__ == "__main__":
         print(row)
     cur.close()
     db.close()
+
+
+if __name__ == "__main__":
+    main()
