@@ -15,13 +15,12 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
     cur = db.cursor()
-    # Utilisation d'une seule chaîne avec des espaces clairs
     query = """SELECT cities.name
                 FROM cities
                 JOIN states ON cities.state_id = states.id
-                WHERE states.name =%s
+                WHERE states.name = %s
                 ORDER BY cities.id ASC"""
-    cur.execute(query)
+    cur.execute(query, (sys.argv[4],))
     rows = cur.fetchall()
     cities_list = [row[0] for row in rows]
     print(", ".join(cities_list))
