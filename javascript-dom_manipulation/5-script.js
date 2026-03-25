@@ -1,10 +1,9 @@
-// 1. La ou on va chercher les info (URL)
-const url = 'https://swapi-api.hbtn.io/api/people/5/?format=json';
+// 1. Sélection de l'élément cliquable et de la cible
+const updateTrigger = document.querySelector('#update_header');
+const headerElement = document.querySelector('header');
 
-// 2. fetch = va voir l'url demande les infos et envoi une promise
-fetch(url)
-    .then(response => response.json()) // 3.la réponse en JSON
-    .then(data => {
-        // 4. # = balise character et data.name = va juste cherche le name
-        document.querySelector('#character').textContent = data.name;
-    });
+// 2. Écoute du clic
+updateTrigger.addEventListener('click', function() {
+    // 3.ajout new header !! 
+    headerElement.textContent = 'New Header!!!';
+});
